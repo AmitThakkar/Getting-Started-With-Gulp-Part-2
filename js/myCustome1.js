@@ -9,3 +9,4 @@ var module1 = (function () {
         myCustomFunction1: myCustomFunction1
     }
 }());
+module1.myCustomFunction1();
