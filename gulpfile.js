@@ -3,8 +3,8 @@
  */
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    livereload = require('gulp-livereload');
+    concat = require('gulp-concat'), // Requiring gulp-concat task.
+    livereload = require('gulp-livereload'); // Requiring gulp-livereload task.
 
 function errorLog(error) {
     console.error(error);
@@ -17,15 +17,15 @@ gulp.task('scripts', function () {
     gulp.src('js/*.js')
         .pipe(uglify())
         .on('error', errorLog)
-        .pipe(concat('all.js'))
+        .pipe(concat('all.js')) // Adding concat task here
         .pipe(gulp.dest('build/js'))
-        .pipe(livereload());
+        .pipe(livereload()); // Adding livereload task here.
 });
 
 // Watch Task
 // Watches JS
 gulp.task('watch', function () {
-    livereload.listen();
+    livereload.listen(); // Calling lister on livereload task, which will start listening for changes.
     gulp.watch('js/*.js', ['scripts']);
 });
 
