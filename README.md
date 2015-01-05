@@ -103,6 +103,7 @@ gulp.task('default', ['scripts', 'watch']);
 ```
 
 You will see we have added only 3 lines here:
+
 1. ```livereload = require('gulp-livereload')```: With this line, we are requiring **gulp-livereload** module.
 2. ```.pipe(livereload())```: With this line, we are running **livereload** task.
 3. ```livereload.listen();```: Here we are asking to listen the changes, by default it does not listen.
