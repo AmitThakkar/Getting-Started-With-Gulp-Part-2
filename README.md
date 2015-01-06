@@ -57,7 +57,7 @@ gulp.task('watch', function () {
 gulp.task('default', ['scripts', 'watch']);
 ```
 
-Lets first delete ```build``` directory from your project directory. So we can insure that there is no build directory.
+Lets first delete ```build``` directory from your project directory. So we can insure that there is no ```build``` directory.
 
 ![RemoveBuildDirectory.png](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/RemoveBuildDirectory.png)
 
@@ -115,9 +115,9 @@ Lets try **live-reload** task:
 
 1. First of all install **[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/reviews?hl=en)** extension in your chrome browser, if not installed yet.
 2. Clone code from ```git@github.com:AmitThakkar/Getting-Started-With-Gulp-Part-2.git``` repository or download code from this [link](https://github.com/AmitThakkar/Getting-Started-With-Gulp-Part-2).
-3. Go to clone/download code directory and run ```npm isntall``` command, so it will install all require modules and then ```gulp``` command so it will generate **minify** and **concat** file, and will run **watch** and **livereload** task, and will start listening **livereload** client.
-4. Now open **Gulp-Part-2.html** from any server(Do not open directly)(I am using **WebStorm** IDE and **WebStorm** runs **HTML** files from a server on http://localhost:63342/).
-5. If you have install **Live Reload** extension in chrome then it will added to your top menu with other extensions. if you are seeing ![Off](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Not%20Running.png) this icon that means your **livereload** client is not running. and if you are seeing ![On](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Running.png) this icon that means your **livereload** client is running. If **liverelaod** client is not running then click on that icon it will start **livereload** client.
+3. Go to clone/download code directory and run ```npm isntall``` command, so it will install all require modules and then ```gulp``` command so it will generate **minify** and **concat** file, and will run **watch** and **livereload** task, and will start listening for **livereload** client.
+4. Now open **Gulp-Part-2.html** from any server(do not open directly).I am using **WebStorm** IDE and **WebStorm** runs **HTML** files in a server which runs on http://localhost:63342/.
+5. If you have install **Live Reload** extension in chrome then it will added to your top menu with other extensions. If you are seeing ![Off](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Not%20Running.png) this icon that means your **livereload** client is not running and if you are seeing ![On](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Running.png) this icon that means your **livereload** client is running. If **liverelaod** client is not running then click on that icon it will start **livereload** client.
 6. Now do some changes in any ```.js``` file form **js** directory, and save that file, you will see **gulp** run all the task again and that **HTML** has reloaded again.
 
 Now do your development, and forget to refresh the page, our **Gulp** task will take care of this. :-)
