@@ -19,13 +19,13 @@ gulp.task('scripts', function () {
         .on('error', errorLog)
         .pipe(concat('all.js')) // Adding concat task here
         .pipe(gulp.dest('build/js'))
-        .pipe(livereload()); // Adding livereload task here.
+        .pipe(livereload()); // Adding livereload task here. Which creates a livereload server.
 });
 
 // Watch Task
 // Watches JS
 gulp.task('watch', function () {
-    livereload.listen(); // Calling lister on livereload task, which will start listening for changes.
+    livereload.listen(); // Calling lister on livereload task, which will start listening for livereload client.
     gulp.watch('js/*.js', ['scripts']);
 });
 

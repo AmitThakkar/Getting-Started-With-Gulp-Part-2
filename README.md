@@ -73,7 +73,7 @@ First task help us in **production** environment, Second task help us in **devel
 
 Generally we do some changes, and manually refresh/reload the **HTML** page. We will write a task for it, who will watch our files, and anything gets change into any file from them, it will automatically reload the **HTML** as well.
 
-Add **[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/reviews?hl=en)** extensions to your chrome browser. Then update your **gulpfile.js** with below content:
+Add **[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/reviews?hl=en)** extension to your chrome browser. Then update your **gulpfile.js** with below content:
 
 ```JavaScript
 var gulp = require('gulp'),
@@ -92,12 +92,12 @@ gulp.task('scripts', function () {
         .on('error', errorLog)
         .pipe(concat('all.js'))
         .pipe(gulp.dest('build/js'))
-        .pipe(livereload());  // Adding livereload task here.
+        .pipe(livereload());  // Adding livereload task here. Which creates a livereload server.
 });
 // Watch Task
 // Watches JS
 gulp.task('watch', function () {
-    livereload.listen(); // Calling lister on livereload task, which will start listening for changes.
+    livereload.listen(); // Calling lister on livereload task, which will start listening for livereload client.
     gulp.watch('js/*.js', ['scripts']);
 });
 gulp.task('default', ['scripts', 'watch']);
@@ -106,7 +106,15 @@ gulp.task('default', ['scripts', 'watch']);
 You will see we have added only 3 lines here:
 
 1. ```livereload = require('gulp-livereload')```: With this line, we are requiring **gulp-livereload** module.
-2. ```.pipe(livereload())```: With this line, we are running **livereload** task.
-3. ```livereload.listen();```: Here we are asking to listen the changes, by default it does not listen.
+2. ```.pipe(livereload())```: With this line, we are running **livereload** task. Which creates a **livereload** server.
+3. ```livereload.listen();```: Here we are starting listening for **livereload** client, by default it does not listen.
 
 > NOTE: Here we are using **gulp-livereload** module for **live** **reload** purpose. So install **gulp-livereload**(```npm install --save gulp-livereload```) module if you already have not install.
+
+Lets try **live-reload** task:
+
+1. First of all install **[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/reviews?hl=en)** extension in your chrome browser, if not installed yet.
+2. Clone code from ```git@github.com:AmitThakkar/Getting-Started-With-Gulp-Part-2.git``` repository or download code from this [link](https://github.com/AmitThakkar/Getting-Started-With-Gulp-Part-2).
+3. Go to clone/download code directory and run ```npm isntall``` command, so it will install all require modules and then ```gulp``` command so it will generate **minify** and **concat** file, and will run **watch** and **livereload** task, and will start listening **livereload** client.
+4. Now open **Gulp-Part-2.html** from any server(Do not open directly)(I am using **WebStorm** IDE and **WebStorm** runs **HTML** files from a server on http://localhost:63342/).
+5. If you have install **Live Reload** extension in chrome then it will added to your top menu with other extensions. if your are seeing ![Off]()
