@@ -3,7 +3,7 @@ Getting-Started-With-Gulp-Part-2
 
 ####This repository contains getting started guild with Gulp Part 2.
 
-In my last [blog](http://codechutney.in/blog/nodejs/getting-started-with-gulp/) we build small demo with **Gulp** as below:
+In my last [blog](http://codechutney.in/blog/nodejs/getting-started-with-gulp/) we had built a small demo with **Gulp** as given below:
 
 ```JavaScript
 var gulp = require('gulp'),
@@ -28,9 +28,9 @@ gulp.task('watch', function () {
 gulp.task('default', ['scripts', 'watch']);
 ```
 
-Now in this blog, we will concat all minified ```.js``` files into one file with named ```all.js```. And anything changes happen into any ```.js``` file, then we will do live reloading on the Browser.
+Now in this blog, we will concatenate all minified ```.js``` files into one file with name ```all.js```. And if any changes happen into ```.js``` file, then we will do live reloading on the Browser.
 
-First lets concat all ```.js``` files, for concat all the ```.js``` files, there is a task is already written, that is ```gulp-concat```. We have to install this with ```npm install --save gulp-concat```. After installing the ```gulp-concat```, we have simple require like early we have done for ```gulp-uglify```. Then call concat task after minifing/uglifing all the ```.js``` file and before storing to destination directive as below:
+First lets concatenate all ```.js``` files, for concatenating all the ```.js``` files, there is a task already written, that is ```gulp-concat```. We have to install this with ```npm install --save gulp-concat```. After installing the ```gulp-concat```, we have simple require like early we have done for ```gulp-uglify```. Then call concat task after minifing/uglifing all the ```.js``` file and before storing to destination directive as below:
 
 ```JavaScript
 var gulp = require('gulp'),
@@ -115,9 +115,9 @@ Lets try **live-reload** task:
 
 1. First of all install **[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/reviews?hl=en)** extension in your chrome browser, if not installed yet.
 2. Clone code from ```git@github.com:AmitThakkar/Getting-Started-With-Gulp-Part-2.git``` repository or download code from this [link](https://github.com/AmitThakkar/Getting-Started-With-Gulp-Part-2).
-3. Go to clone/download code directory and run ```npm isntall``` command, so it will install all require modules and then ```gulp``` command so it will generate **minify** and **concat** file, and will run **watch** and **livereload** task, and will start listening for **livereload** client.
+3. Go to clone/download code directory and run ```npm isntall``` command, so it will install all required modules and then ```gulp``` command so it will generate **minify** and **concat** files, and will run **watch** and **livereload** task, and will start listening for **livereload** client.
 4. Now open **Gulp-Part-2.html** from any server(do not open directly).I am using **WebStorm** IDE and **WebStorm** runs **HTML** files in a server which runs on http://localhost:63342/.
-5. If you have install **Live Reload** extension in chrome then it will added to your top menu with other extensions. If you are seeing ![Off](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Not%20Running.png) this icon that means your **livereload** client is not running and if you are seeing ![On](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Running.png) this icon that means your **livereload** client is running. If **liverelaod** client is not running then click on that icon it will start **livereload** client.
+5. If you have install **Live Reload** extension in chrome then it will be added to your top menu with other extensions. If you are seeing ![Off](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Not%20Running.png) this icon that means your **livereload** client is not running and if you are seeing ![On](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/images/Running.png) this icon that means your **livereload** client is running. If **liverelaod** client is not running then click on that icon it will start **livereload** client.
 6. Now do some changes in any ```.js``` file form **js** directory, and save that file, you will see **gulp** run all the task again and that **HTML** has reloaded again.
 
 Now do your development, and forget to refresh the page, our **Gulp** task will take care of this. :-)
