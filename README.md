@@ -1,7 +1,6 @@
-Getting-Started-With-Gulp-Part-2
-================================
+#Getting Started with GulpJS Part-2
 
-####This repository contains getting started guild with Gulp Part 2.
+####This repository contains Getting started guild with GulpJS Part 2.
 
 In my last [blog](http://codechutney.in/blog/nodejs/getting-started-with-gulp/) we build small demo with **Gulp** as below:
 
