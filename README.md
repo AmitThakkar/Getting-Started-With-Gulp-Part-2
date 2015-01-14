@@ -120,3 +120,5 @@ Lets try **live-reload** task:
 6. Now do some changes in any ```.js``` file form **js** directory, and save that file, you will see **gulp** run all the task again and that **HTML** has reloaded again.
 
 Now do your development, and forget to refresh the page, our **Gulp** task will take care of this. :-)
+
+You can checkout full working source code from this [link](https://github.com/AmitThakkar/Getting-Started-With-Gulp-Part-2).
