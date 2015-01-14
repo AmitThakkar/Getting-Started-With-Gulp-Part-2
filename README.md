@@ -29,7 +29,7 @@ gulp.task('default', ['scripts', 'watch']);
 
 Now in this blog, we will concatenate all minified ```.js``` files into one file with name ```all.js```. And if any changes happen into ```.js``` file, then we will do live reloading on the Browser.
 
-First lets concatenate all ```.js``` files, for concatenating all the ```.js``` files, there is a task already written, that is ```gulp-concat```. We have to install this with ```npm install --save gulp-concat```. After installing the ```gulp-concat```, we have to simple use require like early we had done for ```gulp-uglify```. Then call concat task after minifing/uglifing all the ```.js``` files and before storing to the destination directive as below:
+First lets concatenate all ```.js``` files, for concatenating all the ```.js``` files, there is a task already written, that is ```gulp-concat```. We have to install this with ```npm install --save gulp-concat```. After installing the ```gulp-concat```, we have to simply use 'require' like earlier we had done for ```gulp-uglify```. Then call concat task after minifing/uglifing all the ```.js``` files, before storing to the destination directive as below:
 
 ```JavaScript
 var gulp = require('gulp'),
@@ -56,11 +56,11 @@ gulp.task('watch', function () {
 gulp.task('default', ['scripts', 'watch']);
 ```
 
-Lets first delete ```build``` directory from your project directory, so that we can insure that there is no ```build``` directory.
+Let's first delete ```build``` directory from our project directory, so that we can ensure that there is no ```build``` directory.
 
 ![RemoveBuildDirectory.png](https://raw.githubusercontent.com/AmitThakkar/Getting-Started-With-Gulp-Part-2/master/RemoveBuildDirectory.png)
 
-Now run ```gulp``` command again. After running the ```gulp``` command, we will see that```build/js``` directories has been created and it is having only one ```.js``` file with name **all.js**, where we provided **concat** task (```.pipe(concat('all.js'))```). All the ```.js``` files have been first **uglified** then **concatenated** to a single file with named **all.js**. That's why we have only one **all.js** file into ```build/js``` directory.
+Now run ```gulp``` command again. After running the ```gulp``` command, we will see that```build/js``` directory has been created and it is having only one ```.js``` file with name **all.js**, where we provided **concat** task (```.pipe(concat('all.js'))```). All the ```.js``` files have been first **uglified** then **concatenated** to a single file with named **all.js**. That's why we have only one **all.js** file into ```build/js``` directory.
 
 Till now, we have learn
 
@@ -70,7 +70,7 @@ Till now, we have learn
 
 First task help us in **production** environment, Second task help us in **development** environment and Third task help us in **production** environment. Now next turn is for **development** environment, Lets right a task which will help us in **development** environment.
 
-Generally we do some changes, and manually refresh/reload the **HTML** page. We will write a task for it, which will watch our files, and if anything gets changed into any file, it will automatically reload the **HTML** as well.
+Generally we do some changes, and manually refresh/reload the **HTML** page. We will write a task for it, which will watch our files, and if anything gets changed in any file, it will automatically reload the **HTML** as well.
 
 Add **[Live Reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/reviews?hl=en)** extension to your chrome browser. Then update your **gulpfile.js** with below content:
 
