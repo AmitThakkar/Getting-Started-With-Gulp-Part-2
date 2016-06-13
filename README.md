@@ -121,4 +121,12 @@ Lets try **live-reload** task:
 
 Now do your development, and forget to refresh the page, our **Gulp** task will take care of this. :-)
 
-You can checkout full working source code from this [link](https://github.com/AmitThakkar/Getting-Started-With-Gulp-Part-2).
+Follow Me
+---
+[Github](https://github.com/AmitThakkar)
+
+[Twitter](https://twitter.com/amit_thakkar01)
+
+[LinkedIn](https://in.linkedin.com/in/amitthakkar01)
+
+[More Blogs By Me](http://amitthakkar.github.io/)
